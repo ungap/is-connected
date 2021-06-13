@@ -1,0 +1,39 @@
+{
+  "name": "@ungap/is-connected",
+  "version": "0.1.0",
+  "description": "An Element.prototype.isConnected polyfill",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "unpkg": "min.js",
+  "scripts": {
+    "build": "npm run cjs && npm run esm && npm run min",
+    "cjs": "cp index.js cjs/",
+    "esm": "cp index.js esm/",
+    "min": "uglifyjs index.js --support-ie8 --comments=/^!/ -c -m -o min.js",
+    "size": "cat index.js | wc -c && cat min.js | wc -c && gzip -c9 min.js | wc -c && cat min.js | brotli | wc -c"
+  },
+  "keywords": [
+    "Element",
+    "isConnected",
+    "polyfill",
+    "legacy"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "uglify-js": "^3.9.1"
+  },
+  "type": "module",
+  "exports": {
+    "import": "./esm/index.js",
+    "default": "./cjs/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ungap/is-connected.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ungap/is-connected/issues"
+  },
+  "homepage": "https://github.com/ungap/is-connected#readme"
+}
