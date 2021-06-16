@@ -1,4 +1,4 @@
 # is-connected
 
-An `Element.prototype.isConnected` polyfill.
+A `Node.prototype.isConnected` polyfill.
 

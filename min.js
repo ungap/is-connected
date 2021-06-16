@@ -1,2 +1,2 @@
 /*! (c) Andrea Giammarchi - ISC */
-"isConnected"in Element.prototype||Object.defineProperty(Element.prototype,"isConnected",{configurable:!0,get:function(){return!(this.ownerDocument.compareDocumentPosition(this)&this.DOCUMENT_POSITION_DISCONNECTED)}});
+"isConnected"in Node.prototype||Object.defineProperty(Node.prototype,"isConnected",{configurable:!0,get:function(){return!(this.ownerDocument.compareDocumentPosition(this)&this.DOCUMENT_POSITION_DISCONNECTED)}});
