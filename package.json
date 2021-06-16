@@ -1,6 +1,6 @@
 {
   "name": "@ungap/is-connected",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A Node.prototype.isConnected polyfill",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
